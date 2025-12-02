@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "schema": "source .env && gql.tada generate-schema https://graphql.datocms.com --header \"X-Exclude-Invalid: true\" --header \"Authorization: $DATOCMS_API_TOKEN\""
   },
   "dependencies": {
+    "@datocms/cda-client": "^0.2.7",
+    "base-ui": "^0.0.294",
+    "gql.tada": "^1.9.0",
     "next": "16.0.6",
     "react": "19.2.0",
     "react-dom": "19.2.0"
